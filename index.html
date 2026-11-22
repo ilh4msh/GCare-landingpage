@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GCare: layanan cuci perlengkapan olahraga bela diri. Jemput, cuci dengan benar, antar kembali sebelum latihan berikutnya.">
+  <title>GCare, Care for your gear</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ 1. HEADER / NAVBAR ============ -->
+  <header class="site-header" data-site-header>
+    <div class="container site-header__inner">
+      <a class="logo" href="#top" aria-label="GCare, ke atas halaman">
+        <img class="logo__icon" src="images/logo.svg" alt="" width="42" height="42">
+        <span class="logo__text">GCare</span>
+      </a>
+
+      <nav class="main-nav" id="primary-nav" aria-label="Navigasi utama" data-nav>
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="#how-it-works" data-nav-link>How it works</a></li>
+          <li><a class="main-nav__link" href="#price-list" data-nav-link>Price List</a></li>
+          <li><a class="main-nav__link" href="#faq" data-nav-link>FAQ</a></li>
+        </ul>
+        <a class="btn btn--primary main-nav__cta" href="#notify" data-nav-link>Notify us</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Buka menu">
+        <svg class="nav-toggle__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ 2. HERO ============ -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="badge" data-reveal>
+            <span class="badge__dot" aria-hidden="true"></span>
+            COMING SOON · DEPOK &amp; UI AREA
+          </p>
+          <h1 class="hero__title" id="hero-title" data-reveal>Smelly gloves? Leave them to us!</h1>
+          <p class="hero__lead" data-reveal>We pick up your gear, clean it right, and bring it back before your next training.</p>
+          <a class="btn btn--primary btn--lg hero__cta" href="#notify" data-reveal>
+            Notify us
+            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M5 12h14m-6-6 6 6-6 6"/>
+            </svg>
+          </a>
+
+          <ul class="chip-list" data-reveal>
+            <li class="info-chip">
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3 3h8l10 10-8 8L3 11z"/><circle cx="7.5" cy="7.5" r="1"/>
+              </svg>
+              <span>from <span class="mono">Rp20.000</span></span>
+            </li>
+            <li class="info-chip">
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+              </svg>
+              <span>back in ~3 days</span>
+            </li>
+            <li class="info-chip">
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="m9 12 2 2 4-4"/>
+              </svg>
+              <span>no hidden fees</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Visual: mockup HP + kartu melayang (dekoratif, dibuat dari HTML) -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="phone-backdrop">
+            <span class="phone-backdrop__dot"></span>
+          </div>
+
+          <div class="phone" data-reveal>
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="phone__image">
+                <span class="status-tag"><span class="status-tag__dot"></span>DITERIMA</span>
+                <svg class="phone__glove" width="64" height="64" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="M9 14V9.5a2 2 0 0 1 4 0V8a2 2 0 0 1 4 0v1a2 2 0 0 1 4 0V17a7 7 0 0 1-7 7h-1a5 5 0 0 1-5-5z"/>
+                  <path d="M11 27h10"/>
+                </svg>
+              </div>
+
+              <div class="phone__body">
+                <h2 class="phone__title">Gloves</h2>
+                <p class="phone__meta">
+                  <span class="mono">mulai Rp30.000</span>
+                  <span class="pill">
+                    <svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                      <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+                    </svg>
+                    3 hari
+                  </span>
+                </p>
+
+                <ul class="phone__rows">
+                  <li class="dotted-row"><span>Boxing, di atas 10 oz</span><span class="mono">Rp35.000</span></li>
+                  <li class="dotted-row"><span>MMA, karate, TKD</span><span class="mono">Rp30.000</span></li>
+                </ul>
+
+                <ul class="phone__options">
+                  <li class="option">
+                    <span class="option__icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                        <path d="M4 11h16l-1.5 7a2 2 0 0 1-2 1.5h-9a2 2 0 0 1-2-1.5z"/><path d="M8 11V8m4 3V6m4 5V8"/>
+                      </svg>
+                    </span>
+                    <span>Dicuci tangan</span>
+                  </li>
+                  <li class="option">
+                    <span class="option__icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                        <path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/><path d="M4 4l16 16"/>
+                      </svg>
+                    </span>
+                    <span>Tanpa panas</span>
+                  </li>
+                </ul>
+
+                <div class="phone__cta">Tambah ke keranjang</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu melayang: care label -->
+          <div class="float-card float-card--label" data-reveal>
+            <span class="float-card__tag">
+              <svg class="icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <circle cx="12" cy="12" r="8"/>
+              </svg>
+              CARE LABEL
+            </span>
+            <p class="float-card__title">Handwraps · cotton</p>
+            <ul class="float-card__icons">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="M4 11h16l-1.5 7a2 2 0 0 1-2 1.5h-9a2 2 0 0 1-2-1.5z"/><path d="M8 11V8m4 3V6m4 5V8"/>
+                </svg>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4v16M15 4v16"/>
+                </svg>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/><path d="M4 4l16 16"/>
+                </svg>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Kartu melayang: order -->
+          <div class="float-card float-card--order" data-reveal>
+            <div class="order-ticket__main">
+              <p class="order-ticket__code"><span class="order-ticket__dot"></span><span class="mono">GC-004</span></p>
+              <p class="order-ticket__status">Menunggu penjemputan</p>
+              <p class="order-ticket__time">Sab, 28 Nov · 10.00–12.00</p>
+            </div>
+            <div class="order-ticket__side">
+              <span class="order-ticket__label mono">ITEM</span>
+              <span class="order-ticket__count mono">02</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. HOW IT WORKS ============ -->
+    <section class="section section--dark how" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <h2 class="section__title" id="how-title" data-reveal>How it works</h2>
+
+        <div class="steps">
+          <!-- Langkah 1: Book -->
+          <article class="step" data-reveal>
+            <header class="step__header">
+              <span class="step__number mono" aria-hidden="true">1</span>
+              <h3 class="step__title mono">Book</h3>
+            </header>
+            <p class="step__desc">Pick your gear and a pickup time.</p>
+
+            <div class="step__card booking" data-booking>
+              <p class="booking__title" id="booking-title">Kapan gear dijemput?</p>
+
+              <div class="booking__dates" role="radiogroup" aria-labelledby="booking-title" data-date-group>
+                <button class="date-option" type="button" role="radio" data-date-option aria-checked="false">
+                  <span class="date-option__day">Jum</span>
+                  <span class="date-option__num">27</span>
+                </button>
+                <button class="date-option is-selected" type="button" role="radio" data-date-option aria-checked="true">
+                  <span class="date-option__day">Sab</span>
+                  <span class="date-option__num">28</span>
+                </button>
+                <button class="date-option is-disabled" type="button" role="radio" data-date-option aria-checked="false" disabled>
+                  <span class="date-option__day">Min</span>
+                  <span class="date-option__num">29</span>
+                </button>
+                <button class="date-option" type="button" role="radio" data-date-option aria-checked="false">
+                  <span class="date-option__day">Sen</span>
+                  <span class="date-option__num">30</span>
+                </button>
+              </div>
+
+              <div class="booking__times" role="radiogroup" aria-label="Pilih jam penjemputan" data-time-group>
+                <button class="time-option mono" type="button" role="radio" data-time-option aria-checked="false">08.00–10.00</button>
+                <button class="time-option mono is-selected" type="button" role="radio" data-time-option aria-checked="true">10.00–12.00</button>
+              </div>
+
+              <p class="booking__return">Kembali <strong>Sel, 1 Des</strong></p>
+            </div>
+          </article>
+
+          <!-- Langkah 2: We clean -->
+          <article class="step" data-reveal>
+            <header class="step__header">
+              <span class="step__number mono" aria-hidden="true">2</span>
+              <h3 class="step__title mono">We clean</h3>
+            </header>
+            <p class="step__desc">Washed by hand, the right way for each material.</p>
+
+            <div class="step__card">
+              <ul class="clean-list">
+                <li class="clean-list__item">
+                  <span class="icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M9 11h4M11 9v4"/>
+                    </svg>
+                  </span>
+                  <span>Dicek dan dihitung saat diterima</span>
+                </li>
+                <li class="clean-list__item">
+                  <span class="icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <path d="M4 11h16l-1.5 7a2 2 0 0 1-2 1.5h-9a2 2 0 0 1-2-1.5z"/><path d="M8 11V8m4 3V6m4 5V8"/>
+                    </svg>
+                  </span>
+                  <span>Dicuci tangan, sabun pH netral</span>
+                </li>
+                <li class="clean-list__item">
+                  <span class="icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <path d="M4 9h9a2.5 2.5 0 1 0-2.5-2.5M4 14h13a2.5 2.5 0 1 1-2.5 2.5M4 19h6"/>
+                    </svg>
+                  </span>
+                  <span>Bagian dalam dihilangkan baunya</span>
+                </li>
+                <li class="clean-list__item">
+                  <span class="icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/><path d="M4 4l16 16"/>
+                    </svg>
+                  </span>
+                  <span>Dikeringkan tanpa panas</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Langkah 3: Get it back -->
+          <article class="step" data-reveal>
+            <header class="step__header">
+              <span class="step__number mono" aria-hidden="true">3</span>
+              <h3 class="step__title mono">Get it back</h3>
+            </header>
+            <p class="step__desc">Track it until it's back with you.</p>
+
+            <div class="step__card">
+              <ol class="timeline">
+                <li class="timeline__item is-done">
+                  <span class="timeline__marker" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                      <path d="m5 12 4.5 4.5L19 7"/>
+                    </svg>
+                  </span>
+                  <div class="timeline__text">
+                    <p class="timeline__title">Gear diterima · <span class="mono">2 item</span></p>
+                    <p class="timeline__meta">Sab, 28 Nov · 10.32</p>
+                  </div>
+                </li>
+                <li class="timeline__item is-active" aria-current="step">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__text">
+                    <p class="timeline__title">Sedang dirawat</p>
+                    <p class="timeline__meta">Diperbarui 10.24</p>
+                  </div>
+                </li>
+                <li class="timeline__item is-pending">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__text">
+                    <p class="timeline__title">Sedang diantar</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. PRICE LIST ============ -->
+    <section class="section price" id="price-list" aria-labelledby="price-title">
+      <div class="container">
+        <h2 class="section__title" id="price-title" data-reveal>Price List</h2>
+
+        <ul class="fee-strip" data-reveal>
+          <li>Pickup <span class="mono">Rp8.000</span></li>
+          <li>Delivery <span class="mono">Rp8.000</span></li>
+          <li>Drop off yourself <span class="mono">free</span></li>
+        </ul>
+
+        <div class="price-grid">
+          <article class="price-card" data-reveal>
+            <img class="price-card__img" src="images/hand-wraps.png" alt="Sepasang hand wraps hitam untuk tinju" width="72" height="72" loading="lazy">
+            <div class="price-card__body">
+              <h3 class="price-card__name">Hand Wraps</h3>
+              <ul class="price-card__rows">
+                <li class="dotted-row"><span>Over 3 m</span><span class="mono">Rp25.000</span></li>
+                <li class="dotted-row"><span>Up to 3 m</span><span class="mono">Rp20.000</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="price-card" data-reveal>
+            <img class="price-card__img" src="images/gloves.png" alt="Sepasang sarung tangan tinju merah" width="72" height="72" loading="lazy">
+            <div class="price-card__body">
+              <h3 class="price-card__name">Gloves</h3>
+              <ul class="price-card__rows">
+                <li class="dotted-row"><span>Boxing, 10 oz+</span><span class="mono">Rp35.000</span></li>
+                <li class="dotted-row"><span>MMA, karate, TKD</span><span class="mono">Rp30.000</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="price-card" data-reveal>
+            <img class="price-card__img" src="images/pads.png" alt="Pads latihan pukulan untuk tinju dan Muay Thai" width="72" height="72" loading="lazy">
+            <div class="price-card__body">
+              <h3 class="price-card__name">Pads</h3>
+              <ul class="price-card__rows">
+                <li class="dotted-row"><span>Boxing pads</span><span class="mono">Rp35.000</span></li>
+                <li class="dotted-row"><span>Muay Thai pads</span><span class="mono">Rp40.000</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="price-card" data-reveal>
+            <img class="price-card__img" src="images/shin-guards.png" alt="Sepasang pelindung tulang kering berwarna biru gelap" width="72" height="72" loading="lazy">
+            <div class="price-card__body">
+              <h3 class="price-card__name">Shin Guards</h3>
+              <ul class="price-card__rows">
+                <li class="dotted-row"><span>Any type</span><span class="mono">Rp40.000</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="price-card" data-reveal>
+            <img class="price-card__img" src="images/headgear.png" alt="Headgear pelindung kepala berwarna hitam" width="72" height="72" loading="lazy">
+            <div class="price-card__body">
+              <h3 class="price-card__name">Headgear</h3>
+              <ul class="price-card__rows">
+                <li class="dotted-row"><span>Any type</span><span class="mono">Rp40.000</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="price-card" data-reveal>
+            <img class="price-card__img" src="images/body-shield.png" alt="Body shield pelindung dada dan badan berwarna hitam" width="72" height="72" loading="lazy">
+            <div class="price-card__body">
+              <h3 class="price-card__name">Body Shield</h3>
+              <ul class="price-card__rows">
+                <li class="dotted-row"><span>Any type</span><span class="mono">Rp60.000</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="price-card" data-reveal>
+            <img class="price-card__img" src="images/belly-protector.png" alt="Belly protector pelindung perut berwarna merah" width="72" height="72" loading="lazy">
+            <div class="price-card__body">
+              <h3 class="price-card__name">Belly Protector</h3>
+              <ul class="price-card__rows">
+                <li class="dotted-row"><span>Any type</span><span class="mono">Rp30.000</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="price-card" data-reveal>
+            <img class="price-card__img" src="images/elbow-knee-pads.png" alt="Pelindung siku dan lutut berwarna biru" width="72" height="72" loading="lazy">
+            <div class="price-card__body">
+              <h3 class="price-card__name">Elbow &amp; Knee Pads</h3>
+              <ul class="price-card__rows">
+                <li class="dotted-row"><span>Any type</span><span class="mono">Rp30.000</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="price-card" data-reveal>
+            <img class="price-card__img" src="images/groin-guard.png" alt="Groin guard pelindung area selangkangan berwarna putih" width="72" height="72" loading="lazy">
+            <div class="price-card__body">
+              <h3 class="price-card__name">Groin Guard</h3>
+              <ul class="price-card__rows">
+                <li class="dotted-row"><span>Any type</span><span class="mono">Rp20.000</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="price__note">Soft-launch prices</p>
+      </div>
+    </section>
+
+    <!-- ============ 5. FAQ ============ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 class="section__title" id="faq-title" data-reveal>FAQ</h2>
+
+        <div class="faq__grid">
+          <article class="faq__item" data-reveal>
+            <h3 class="faq__question">Where do you pick up?</h3>
+            <p class="faq__answer">Around Depok and UI. Outside that area, drop off at GCare Point for free.</p>
+          </article>
+          <article class="faq__item" data-reveal>
+            <h3 class="faq__question">Where is GCare Point?</h3>
+            <p class="faq__answer">Near Pusgiwa UI. Open Monday to Saturday, 08.00–20.00.</p>
+          </article>
+          <article class="faq__item" data-reveal>
+            <h3 class="faq__question">How do I pay?</h3>
+            <p class="faq__answer">QRIS or virtual account, right in the app.</p>
+          </article>
+          <article class="faq__item" data-reveal>
+            <h3 class="faq__question">What if my gear can't be cleaned safely?</h3>
+            <p class="faq__answer">We return it untouched and refund that item.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. NOTIFY ============ -->
+    <section class="section section--dark notify" id="notify" aria-labelledby="notify-title">
+      <div class="container notify__inner">
+        <div class="notify__content">
+          <p class="badge" data-reveal>
+            <span class="badge__dot" aria-hidden="true"></span>
+            COMING SOON
+          </p>
+          <h2 class="notify__title" id="notify-title" data-reveal>Be the first to try GCare!</h2>
+          <p class="notify__lead" data-reveal>Leave your WhatsApp. We'll text you when we open.</p>
+        </div>
+
+        <div class="notify__card" data-reveal>
+          <form class="notify-form" id="notify-form" data-notify-form novalidate>
+            <div class="field">
+              <label class="field__label" for="notify-name">Name</label>
+              <input class="field__input" type="text" id="notify-name" name="name" placeholder="Raka Pratama" autocomplete="name" required data-field="name">
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="notify-phone">WhatsApp number</label>
+              <input class="field__input" type="tel" id="notify-phone" name="whatsapp" placeholder="0812 3456 7890" autocomplete="tel" inputmode="tel" required data-field="whatsapp">
+            </div>
+
+            <fieldset class="field field--chips" data-chip-group="gear">
+              <legend class="field__label">What needs cleaning?</legend>
+              <div class="chips">
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="gear-handwraps" name="gear" value="handwraps">
+                  <span class="chip__label">Handwraps</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="gear-gloves" name="gear" value="gloves">
+                  <span class="chip__label">Gloves</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="gear-pads" name="gear" value="pads">
+                  <span class="chip__label">Pads</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="gear-shin-guards" name="gear" value="shin-guards">
+                  <span class="chip__label">Shin guards</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="gear-headgear" name="gear" value="headgear">
+                  <span class="chip__label">Headgear</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="gear-other" name="gear" value="other">
+                  <span class="chip__label">Other</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field field--chips" data-chip-group="days">
+              <legend class="field__label">Training days <span class="field__optional">(optional)</span></legend>
+              <div class="chips">
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="day-mon" name="days" value="mon">
+                  <span class="chip__label">Mon</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="day-tue" name="days" value="tue">
+                  <span class="chip__label">Tue</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="day-wed" name="days" value="wed">
+                  <span class="chip__label">Wed</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="day-thu" name="days" value="thu">
+                  <span class="chip__label">Thu</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="day-fri" name="days" value="fri">
+                  <span class="chip__label">Fri</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="day-sat" name="days" value="sat">
+                  <span class="chip__label">Sat</span>
+                </label>
+                <label class="chip">
+                  <input class="chip__input" type="checkbox" id="day-sun" name="days" value="sun">
+                  <span class="chip__label">Sun</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <label class="consent" for="notify-consent">
+              <input class="consent__input" type="checkbox" id="notify-consent" name="consent" data-field="consent">
+              <span class="consent__box" aria-hidden="true"></span>
+              <span class="consent__text">Text me about GCare. My number is only used for this.</span>
+            </label>
+
+            <button class="btn btn--primary btn--block" type="submit" data-submit>Notify us</button>
+
+            <p class="form-message" data-form-message role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 7. FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="logo logo--footer" href="#top" aria-label="GCare, ke atas halaman">
+          <img class="logo__icon" src="images/logo.svg" alt="" width="42" height="42">
+          <span class="logo__text">GCare</span>
+        </a>
+
+        <nav class="footer-nav" aria-label="Navigasi footer">
+          <ul class="footer-nav__list">
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#price-list">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#notify">Notify us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2026 GCare · Care for your gear</p>
+        <p>A PPD project by Group B09, Fasilkom UI</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
