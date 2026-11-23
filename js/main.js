@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     id: {
-      "meta.title": "GCare, Rawat gearmu",
+      "meta.title": "GCare, Care for your gear",
       "meta.description": "GCare: layanan cuci perlengkapan bela diri. Kami jemput, bersihkan dengan benar, dan antar kembali sebelum latihan berikutnya.",
 
       "nav.home": "GCare, ke atas halaman",
@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       "footer.nav": "Navigasi footer",
       "footer.pricing": "Harga",
-      "footer.copy": "© 2026 GCare · Rawat gearmu",
+      "footer.copy": "© 2026 GCare · Care for your gear",
       "footer.credit": "Proyek PPD oleh Kelompok B09, Fasilkom UI"
     }
   };
