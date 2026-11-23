@@ -229,12 +229,14 @@ document.addEventListener("DOMContentLoaded", function () {
       return value.trim().length > 0;
     }
 
-    // Hanya angka, spasi, +, -; lalu 9 sampai 15 digit
+        // Buang awalan 0 / 62 / +62, spasi, dan tanda hubung dari nomor
+    function normalizePhone(value) {
+      return value.trim().replace(/[\s-]/g, "").replace(/^(\+?62|0)/, "");
+    }
+
+    // Nomor seluler Indonesia setelah +62: diawali 8, total 9 sampai 12 digit
     function isPhoneValid(value) {
-      var raw = value.trim();
-      if (!raw || !/^[0-9+\s-]+$/.test(raw)) return false;
-      var digits = raw.replace(/[\s+-]/g, "");
-      return /^[0-9]+$/.test(digits) && digits.length >= 9 && digits.length <= 15;
+      return /^8[0-9]{8,11}$/.test(normalizePhone(value));
     }
 
     // Hapus error saat user mulai mengetik ulang
@@ -247,6 +249,12 @@ document.addEventListener("DOMContentLoaded", function () {
           showMessage("", null);
         }
       });
+    });
+
+    // Kalau user mengetik atau menempel 0 / 62 / +62 di depan, langsung dibuang
+    phoneInput.addEventListener("input", function () {
+      var cleaned = phoneInput.value.replace(/^\s*(\+?62|0)\s*/, "");
+      if (cleaned !== phoneInput.value) phoneInput.value = cleaned;
     });
 
     form.addEventListener("submit", function (event) {
@@ -286,6 +294,63 @@ document.addEventListener("DOMContentLoaded", function () {
         "Terima kasih, " + name + "! Kami akan mengabari lewat WhatsApp saat GCare dibuka.",
         "is-success"
       );
+    });
+  }
+
+  /* ---------- 8. FAQ accordion (animasi buka-tutup) ---------- */
+  function initFaqAccordion() {
+    var items = document.querySelectorAll(".faq__item");
+    var DURATION = 280;
+
+    // Animasikan tinggi item dari satu nilai ke nilai lain
+    function run(item, from, to, onFinish) {
+      item.style.overflow = "hidden";
+      var anim = item.animate(
+        { height: [from + "px", to + "px"] },
+        { duration: DURATION, easing: "ease" }
+      );
+      item._anim = anim;
+      anim.onfinish = function () {
+        item._anim = null;
+        item.style.overflow = "";
+        onFinish();
+      };
+      anim.oncancel = function () {
+        item._anim = null;
+        item.style.overflow = "";
+      };
+    }
+
+    items.forEach(function (item) {
+      var summary = item.querySelector(".faq__summary");
+      if (!summary) return;
+
+      summary.addEventListener("click", function (event) {
+        // Pengguna yang mengurangi animasi: biarkan perilaku bawaan <details>
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        if (!item.animate) return;
+
+        event.preventDefault();
+
+        var from = item.offsetHeight; // tinggi saat ini (juga saat animasi berjalan)
+        var isClosing = item.open && !item.classList.contains("is-closing");
+        if (item._anim) item._anim.cancel();
+
+        if (isClosing) {
+          // Tutup: kecilkan ke tinggi baris pertanyaan, lalu lepas atribut open
+          item.classList.add("is-closing");
+          var closedHeight = summary.offsetHeight + (item.offsetHeight - item.clientHeight);
+          run(item, from, closedHeight, function () {
+            item.open = false;
+            item.classList.remove("is-closing");
+          });
+        } else {
+          // Buka: set open dulu agar tinggi penuh bisa diukur, lalu besarkan
+          item.classList.remove("is-closing");
+          item.open = true;
+          run(item, from, item.offsetHeight, function () {});
+        }
+      });
     });
   }
 

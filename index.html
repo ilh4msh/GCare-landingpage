@@ -91,10 +91,7 @@
             <div class="phone__screen">
               <div class="phone__image">
                 <span class="status-tag"><span class="status-tag__dot"></span>DITERIMA</span>
-                <svg class="phone__glove" width="64" height="64" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
-                  <path d="M9 14V9.5a2 2 0 0 1 4 0V8a2 2 0 0 1 4 0v1a2 2 0 0 1 4 0V17a7 7 0 0 1-7 7h-1a5 5 0 0 1-5-5z"/>
-                  <path d="M11 27h10"/>
-                </svg>
+                <img class="phone__glove" src="images/gloves.png" alt="" width="160" height="160">
               </div>
 
               <div class="phone__body">
@@ -430,22 +427,30 @@
         <h2 class="section__title" id="faq-title" data-reveal>FAQ</h2>
 
         <div class="faq__grid">
-          <article class="faq__item" data-reveal>
-            <h3 class="faq__question">Where do you pick up?</h3>
+          <details class="faq__item" data-reveal>
+            <summary class="faq__summary">
+              <h3 class="faq__question">Where do you pick up?</h3>
+            </summary>
             <p class="faq__answer">Around Depok and UI. Outside that area, drop off at GCare Point for free.</p>
-          </article>
-          <article class="faq__item" data-reveal>
-            <h3 class="faq__question">Where is GCare Point?</h3>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary class="faq__summary">
+              <h3 class="faq__question">Where is GCare Point?</h3>
+            </summary>
             <p class="faq__answer">Near Pusgiwa UI. Open Monday to Saturday, 08.00–20.00.</p>
-          </article>
-          <article class="faq__item" data-reveal>
-            <h3 class="faq__question">How do I pay?</h3>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary class="faq__summary">
+              <h3 class="faq__question">How do I pay?</h3>
+            </summary>
             <p class="faq__answer">QRIS or virtual account, right in the app.</p>
-          </article>
-          <article class="faq__item" data-reveal>
-            <h3 class="faq__question">What if my gear can't be cleaned safely?</h3>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary class="faq__summary">
+              <h3 class="faq__question">What if my gear can't be cleaned safely?</h3>
+            </summary>
             <p class="faq__answer">We return it untouched and refund that item.</p>
-          </article>
+          </details>
         </div>
       </div>
     </section>
@@ -466,12 +471,15 @@
           <form class="notify-form" id="notify-form" data-notify-form novalidate>
             <div class="field">
               <label class="field__label" for="notify-name">Name</label>
-              <input class="field__input" type="text" id="notify-name" name="name" placeholder="Raka Pratama" autocomplete="name" required data-field="name">
+              <input class="field__input" type="text" id="notify-name" name="name" placeholder="Your name" autocomplete="name" required data-field="name">
             </div>
 
             <div class="field">
               <label class="field__label" for="notify-phone">WhatsApp number</label>
-              <input class="field__input" type="tel" id="notify-phone" name="whatsapp" placeholder="0812 3456 7890" autocomplete="tel" inputmode="tel" required data-field="whatsapp">
+              <div class="phone-field">
+                <span class="phone-field__prefix mono">+62</span>
+                <input class="field__input" type="tel" id="notify-phone" name="whatsapp" placeholder="812 3456 7890" autocomplete="tel-national" inputmode="tel" required data-field="whatsapp">
+              </div>
             </div>
 
             <fieldset class="field field--chips" data-chip-group="gear">
