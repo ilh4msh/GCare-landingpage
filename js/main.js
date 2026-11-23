@@ -6,6 +6,286 @@
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
+  /* ---------- Kamus teks (EN / ID) ---------- */
+  var TRANSLATIONS = {
+    en: {
+      "meta.title": "GCare, Care for your gear",
+      "meta.description": "GCare: martial arts gear cleaning service. We pick up, clean it right, and bring it back before your next training.",
+
+      "nav.home": "GCare, back to top",
+      "nav.main": "Main navigation",
+      "nav.how": "How it works",
+      "nav.price": "Price List",
+      "nav.faq": "FAQ",
+      "nav.open": "Open menu",
+      "nav.close": "Close menu",
+      "lang.label": "Language",
+      "cta.notify": "Notify us",
+
+      "hero.badge": "COMING SOON · DEPOK & UI AREA",
+      "hero.title": "Smelly gloves? Leave them to us!",
+      "hero.lead": "We pick up your gear, clean it right, and bring it back before your next training.",
+      "hero.chipFrom": "from",
+      "hero.chipBack": "back in ~3 days",
+      "hero.chipFees": "no hidden fees",
+
+      "phone.received": "RECEIVED",
+      "phone.from": "from Rp30.000",
+      "phone.days": "3 days",
+      "phone.boxing": "Boxing, over 10 oz",
+      "phone.handwashed": "Hand-washed",
+      "phone.noheat": "No heat",
+      "phone.cart": "Add to cart",
+      "card.care": "Handwraps · cotton",
+      "order.status": "Waiting for pickup",
+      "order.time": "Sat, 28 Nov · 10.00–12.00",
+
+      "how.title": "How it works",
+      "step.book": "Book",
+      "step.bookDesc": "Pick your gear and a pickup time.",
+      "step.clean": "We clean",
+      "step.cleanDesc": "Washed by hand, the right way for each material.",
+      "step.back": "Get it back",
+      "step.backDesc": "Track it until it's back with you.",
+      "booking.title": "When should we pick up your gear?",
+      "booking.timeLabel": "Choose pickup time",
+      "booking.return": "Return",
+      "clean.1": "Checked and counted on arrival",
+      "clean.2": "Hand-washed with pH-neutral soap",
+      "clean.3": "Inside deodorized",
+      "clean.4": "Dried without heat",
+      "tl.received": "Gear received",
+      "tl.items": "2 items",
+      "tl.receivedMeta": "Sat, 28 Nov · 10.32",
+      "tl.caring": "Being cared for",
+      "tl.updated": "Updated 10.24",
+      "tl.delivering": "On the way back",
+
+      "day.mon": "Mon", "day.tue": "Tue", "day.wed": "Wed", "day.thu": "Thu",
+      "day.fri": "Fri", "day.sat": "Sat", "day.sun": "Sun",
+
+      "price.title": "Price List",
+      "price.pickup": "Pickup",
+      "price.delivery": "Delivery",
+      "price.dropoff": "Drop off yourself",
+      "price.free": "free",
+      "price.note": "Soft-launch prices",
+      "product.handwraps": "Hand Wraps",
+      "product.gloves": "Gloves",
+      "product.pads": "Pads",
+      "product.shin": "Shin Guards",
+      "product.headgear": "Headgear",
+      "product.bodyShield": "Body Shield",
+      "product.belly": "Belly Protector",
+      "product.elbowKnee": "Elbow & Knee Pads",
+      "product.groin": "Groin Guard",
+      "v.over3m": "Over 3 m",
+      "v.upto3m": "Up to 3 m",
+      "v.boxing10": "Boxing, 10 oz+",
+      "v.mma": "MMA, karate, TKD",
+      "v.boxingPads": "Boxing pads",
+      "v.muayThaiPads": "Muay Thai pads",
+      "v.any": "Any type",
+      "alt.handwraps": "Pair of black hand wraps for boxing",
+      "alt.gloves": "Pair of red boxing gloves",
+      "alt.pads": "Strike pads for boxing and Muay Thai training",
+      "alt.shin": "Pair of dark blue shin guards",
+      "alt.headgear": "Black headgear head protector",
+      "alt.bodyShield": "Black body shield chest protector",
+      "alt.belly": "Red belly protector",
+      "alt.elbowKnee": "Blue elbow and knee pads",
+      "alt.groin": "White groin guard",
+
+      "faq.title": "FAQ",
+      "faq.q1": "Where do you pick up?",
+      "faq.a1": "Around Depok and UI. Outside that area, drop off at GCare Point for free.",
+      "faq.q2": "Where is GCare Point?",
+      "faq.a2": "Near Pusgiwa UI. Open Monday to Saturday, 08.00–20.00.",
+      "faq.q3": "How do I pay?",
+      "faq.a3": "QRIS or virtual account, right in the app.",
+      "faq.q4": "What if my gear can't be cleaned safely?",
+      "faq.a4": "We return it untouched and refund that item.",
+
+      "notify.badge": "COMING SOON",
+      "notify.title": "Be the first to try GCare!",
+      "notify.lead": "Leave your WhatsApp. We'll text you when we open.",
+      "form.name": "Name",
+      "form.namePlaceholder": "Your name",
+      "form.phone": "WhatsApp number",
+      "form.cleaning": "What needs cleaning?",
+      "form.days": "Training days",
+      "form.optional": "(optional)",
+      "form.consent": "Text me about GCare.",
+      "gear.handwraps": "Handwraps",
+      "gear.gloves": "Gloves",
+      "gear.pads": "Pads",
+      "gear.shin": "Shin guards",
+      "gear.headgear": "Headgear",
+      "gear.other": "Other",
+      "msg.nameRequired": "Name is required.",
+      "msg.phoneInvalid": "WhatsApp number is not valid.",
+      "msg.success": "Thank you, {name}! We'll message you on WhatsApp when GCare opens.",
+
+      "footer.nav": "Footer navigation",
+      "footer.pricing": "Pricing",
+      "footer.copy": "© 2026 GCare · Care for your gear",
+      "footer.credit": "A PPD project by Group B09, Fasilkom UI"
+    },
+
+    id: {
+      "meta.title": "GCare, Rawat gearmu",
+      "meta.description": "GCare: layanan cuci perlengkapan bela diri. Kami jemput, bersihkan dengan benar, dan antar kembali sebelum latihan berikutnya.",
+
+      "nav.home": "GCare, ke atas halaman",
+      "nav.main": "Navigasi utama",
+      "nav.how": "Cara kerja",
+      "nav.price": "Daftar Harga",
+      "nav.faq": "FAQ",
+      "nav.open": "Buka menu",
+      "nav.close": "Tutup menu",
+      "lang.label": "Bahasa",
+      "cta.notify": "Kabari kami",
+
+      "hero.badge": "SEGERA HADIR · AREA DEPOK & UI",
+      "hero.title": "Gloves bau? Serahkan ke kami!",
+      "hero.lead": "Kami jemput perlengkapanmu, bersihkan dengan benar, dan antar kembali sebelum latihan berikutnya.",
+      "hero.chipFrom": "mulai",
+      "hero.chipBack": "kembali dalam ~3 hari",
+      "hero.chipFees": "tanpa biaya tersembunyi",
+
+      "phone.received": "DITERIMA",
+      "phone.from": "mulai Rp30.000",
+      "phone.days": "3 hari",
+      "phone.boxing": "Boxing, di atas 10 oz",
+      "phone.handwashed": "Dicuci tangan",
+      "phone.noheat": "Tanpa panas",
+      "phone.cart": "Tambah ke keranjang",
+      "card.care": "Handwraps · katun",
+      "order.status": "Menunggu penjemputan",
+      "order.time": "Sab, 28 Nov · 10.00–12.00",
+
+      "how.title": "Cara kerja",
+      "step.book": "Pesan",
+      "step.bookDesc": "Pilih perlengkapan dan waktu penjemputan.",
+      "step.clean": "Kami bersihkan",
+      "step.cleanDesc": "Dicuci tangan, dengan cara yang tepat untuk tiap bahan.",
+      "step.back": "Terima kembali",
+      "step.backDesc": "Pantau sampai kembali ke tanganmu.",
+      "booking.title": "Kapan gear dijemput?",
+      "booking.timeLabel": "Pilih jam penjemputan",
+      "booking.return": "Kembali",
+      "clean.1": "Dicek dan dihitung saat diterima",
+      "clean.2": "Dicuci tangan, sabun pH netral",
+      "clean.3": "Bagian dalam dihilangkan baunya",
+      "clean.4": "Dikeringkan tanpa panas",
+      "tl.received": "Gear diterima",
+      "tl.items": "2 item",
+      "tl.receivedMeta": "Sab, 28 Nov · 10.32",
+      "tl.caring": "Sedang dirawat",
+      "tl.updated": "Diperbarui 10.24",
+      "tl.delivering": "Sedang diantar",
+
+      "day.mon": "Sen", "day.tue": "Sel", "day.wed": "Rab", "day.thu": "Kam",
+      "day.fri": "Jum", "day.sat": "Sab", "day.sun": "Min",
+
+      "price.title": "Daftar Harga",
+      "price.pickup": "Jemput",
+      "price.delivery": "Antar",
+      "price.dropoff": "Antar sendiri",
+      "price.free": "gratis",
+      "price.note": "Harga soft-launch",
+      "product.handwraps": "Hand Wraps",
+      "product.gloves": "Gloves",
+      "product.pads": "Pads",
+      "product.shin": "Shin Guards",
+      "product.headgear": "Headgear",
+      "product.bodyShield": "Body Shield",
+      "product.belly": "Belly Protector",
+      "product.elbowKnee": "Elbow & Knee Pads",
+      "product.groin": "Groin Guard",
+      "v.over3m": "Lebih dari 3 m",
+      "v.upto3m": "Hingga 3 m",
+      "v.boxing10": "Boxing, 10 oz+",
+      "v.mma": "MMA, karate, TKD",
+      "v.boxingPads": "Boxing pads",
+      "v.muayThaiPads": "Muay Thai pads",
+      "v.any": "Semua jenis",
+      "alt.handwraps": "Sepasang hand wraps hitam untuk tinju",
+      "alt.gloves": "Sepasang gloves tinju merah",
+      "alt.pads": "Pads latihan pukulan untuk tinju dan Muay Thai",
+      "alt.shin": "Sepasang shin guards berwarna biru gelap",
+      "alt.headgear": "Headgear pelindung kepala berwarna hitam",
+      "alt.bodyShield": "Body shield pelindung dada dan badan berwarna hitam",
+      "alt.belly": "Belly protector berwarna merah",
+      "alt.elbowKnee": "Elbow dan knee pads berwarna biru",
+      "alt.groin": "Groin guard berwarna putih",
+
+      "faq.title": "FAQ",
+      "faq.q1": "Di mana kalian menjemput?",
+      "faq.a1": "Di sekitar Depok dan UI. Di luar area itu, antar sendiri ke GCare Point, gratis.",
+      "faq.q2": "Di mana GCare Point?",
+      "faq.a2": "Dekat Pusgiwa UI. Buka Senin sampai Sabtu, 08.00–20.00.",
+      "faq.q3": "Bagaimana cara bayarnya?",
+      "faq.a3": "QRIS atau virtual account, langsung di aplikasi.",
+      "faq.q4": "Bagaimana kalau gear-ku tidak aman dicuci?",
+      "faq.a4": "Kami kembalikan tanpa diproses dan biaya untuk item itu dikembalikan.",
+
+      "notify.badge": "SEGERA HADIR",
+      "notify.title": "Jadi yang pertama mencoba GCare!",
+      "notify.lead": "Tinggalkan nomor WhatsApp-mu. Kami kabari saat GCare buka.",
+      "form.name": "Nama",
+      "form.namePlaceholder": "Nama kamu",
+      "form.phone": "Nomor WhatsApp",
+      "form.cleaning": "Apa yang perlu dicuci?",
+      "form.days": "Hari latihan",
+      "form.optional": "(opsional)",
+      "form.consent": "Kabari aku soal GCare.",
+      "gear.handwraps": "Handwraps",
+      "gear.gloves": "Gloves",
+      "gear.pads": "Pads",
+      "gear.shin": "Shin guards",
+      "gear.headgear": "Headgear",
+      "gear.other": "Lainnya",
+      "msg.nameRequired": "Nama wajib diisi.",
+      "msg.phoneInvalid": "Nomor WhatsApp tidak valid.",
+      "msg.success": "Terima kasih, {name}! Kami akan mengabari lewat WhatsApp saat GCare dibuka.",
+
+      "footer.nav": "Navigasi footer",
+      "footer.pricing": "Harga",
+      "footer.copy": "© 2026 GCare · Rawat gearmu",
+      "footer.credit": "Proyek PPD oleh Kelompok B09, Fasilkom UI"
+    }
+  };
+
+  /* Nama hari dan bulan untuk tanggal kembali (tanpa locale browser) */
+  var DATE_NAMES = {
+    en: {
+      days: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    },
+    id: {
+      days: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+      months: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"]
+    }
+  };
+
+  /* ---------- Bahasa: state & helper ---------- */
+  var STORAGE_KEY = "gcare-lang";
+  var DEFAULT_LANG = "en";
+  var currentLang = DEFAULT_LANG;
+  var langListeners = [];
+
+  // Ambil teks sesuai bahasa aktif
+  function t(key) {
+    var dict = TRANSLATIONS[currentLang];
+    return dict && dict[key] !== undefined ? dict[key] : key;
+  }
+
+  // Daftarkan fungsi yang perlu dijalankan saat bahasa berganti
+  function onLangChange(fn) {
+    langListeners.push(fn);
+  }
+
   /* ---------- 1. Menu hamburger ---------- */
   function initNavToggle() {
     var toggle = document.querySelector("[data-nav-toggle]");
@@ -16,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function setOpen(isOpen) {
       nav.classList.toggle("is-open", isOpen);
       toggle.setAttribute("aria-expanded", String(isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "Tutup menu" : "Buka menu");
+      toggle.setAttribute("aria-label", t(isOpen ? "nav.close" : "nav.open"));
     }
 
     toggle.addEventListener("click", function () {
@@ -36,6 +316,11 @@ document.addEventListener("DOMContentLoaded", function () {
         setOpen(false);
         toggle.focus();
       }
+    });
+
+    // Label tombol mengikuti bahasa
+    onLangChange(function () {
+      setOpen(nav.classList.contains("is-open"));
     });
   }
 
@@ -117,8 +402,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function initBookingOptions() {
     var groups = document.querySelectorAll("[data-date-group], [data-time-group]");
 
-    var DAY_NAMES = ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
-    var MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"];
     var PICKUP_YEAR = 2026;
     var PICKUP_MONTH = 10; // November (indeks 0-11)
     var RETURN_AFTER_DAYS = 3;
@@ -143,9 +426,10 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     }
 
-    // Format "Hari, D Bulan" tanpa bergantung pada locale browser
+    // Format "Hari, D Bulan" sesuai bahasa aktif
     function formatDate(date) {
-      return DAY_NAMES[date.getDay()] + ", " + date.getDate() + " " + MONTH_NAMES[date.getMonth()];
+      var names = DATE_NAMES[currentLang];
+      return names.days[date.getDay()] + ", " + date.getDate() + " " + names.months[date.getMonth()];
     }
 
     // Tanggal kembali = tanggal jemput terpilih + 3 hari
@@ -159,9 +443,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (isNaN(dayOfMonth)) return;
 
       // Date otomatis menggeser bulan bila melewati akhir November
-      var pickup = new Date(PICKUP_YEAR, PICKUP_MONTH, dayOfMonth);
       var back = new Date(PICKUP_YEAR, PICKUP_MONTH, dayOfMonth + RETURN_AFTER_DAYS);
-      if (isNaN(pickup.getTime()) || isNaN(back.getTime())) return;
+      if (isNaN(back.getTime())) return;
 
       returnText.textContent = formatDate(back);
     }
@@ -182,8 +465,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Nilai awal mengikuti tombol yang sudah terpilih di HTML
+    // Nilai awal dan saat bahasa berganti
     updateReturnDate();
+    onLangChange(updateReturnDate);
   }
 
   /* ---------- 6. Chip pilihan di form ---------- */
@@ -229,7 +513,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return value.trim().length > 0;
     }
 
-        // Buang awalan 0 / 62 / +62, spasi, dan tanda hubung dari nomor
+    // Buang awalan 0 / 62 / +62, spasi, dan tanda hubung dari nomor
     function normalizePhone(value) {
       return value.trim().replace(/[\s-]/g, "").replace(/^(\+?62|0)/, "");
     }
@@ -267,13 +551,13 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInvalid(phoneInput);
 
       if (!isNameValid(nameInput.value)) {
-        errors.push("Nama wajib diisi.");
+        errors.push(t("msg.nameRequired"));
         markInvalid(nameInput);
         firstInvalid = firstInvalid || nameInput;
       }
 
       if (!isPhoneValid(phoneInput.value)) {
-        errors.push("Nomor WhatsApp tidak valid.");
+        errors.push(t("msg.phoneInvalid"));
         markInvalid(phoneInput);
         firstInvalid = firstInvalid || phoneInput;
       }
@@ -290,10 +574,12 @@ document.addEventListener("DOMContentLoaded", function () {
       form.querySelectorAll("[data-chip-group]").forEach(function (group) {
         group.classList.remove("is-invalid");
       });
-      showMessage(
-        "Terima kasih, " + name + "! Kami akan mengabari lewat WhatsApp saat GCare dibuka.",
-        "is-success"
-      );
+      showMessage(t("msg.success").replace("{name}", name), "is-success");
+    });
+
+    // Pesan lama dihapus saat bahasa berganti agar tidak campur bahasa
+    onLangChange(function () {
+      showMessage("", null);
     });
   }
 
@@ -354,6 +640,80 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /* ---------- 9. Toggle bahasa EN / ID ---------- */
+  function initLanguageToggle() {
+    var buttons = document.querySelectorAll("[data-lang-option]");
+
+    function readSavedLang() {
+      try {
+        var saved = localStorage.getItem(STORAGE_KEY);
+        return TRANSLATIONS[saved] ? saved : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function saveLang(lang) {
+      try {
+        localStorage.setItem(STORAGE_KEY, lang);
+      } catch (e) {
+        /* penyimpanan tidak tersedia: abaikan */
+      }
+    }
+
+    // Ganti semua teks dan atribut sesuai kamus
+    function applyTranslations() {
+      var dict = TRANSLATIONS[currentLang];
+
+      document.documentElement.lang = currentLang;
+      document.title = dict["meta.title"];
+
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute("content", dict["meta.description"]);
+
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        var value = dict[el.getAttribute("data-i18n")];
+        if (value !== undefined) el.textContent = value;
+      });
+
+      ["placeholder", "alt", "aria-label", "title"].forEach(function (attr) {
+        document.querySelectorAll("[data-i18n-" + attr + "]").forEach(function (el) {
+          var value = dict[el.getAttribute("data-i18n-" + attr)];
+          if (value !== undefined) el.setAttribute(attr, value);
+        });
+      });
+    }
+
+    // Tandai tombol bahasa yang aktif
+    function updateButtons() {
+      buttons.forEach(function (button) {
+        var isActive = button.getAttribute("data-lang-option") === currentLang;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+    }
+
+    function setLanguage(lang, persist) {
+      if (!TRANSLATIONS[lang]) return;
+      currentLang = lang;
+      applyTranslations();
+      updateButtons();
+      if (persist) saveLang(lang);
+      langListeners.forEach(function (fn) {
+        fn(lang);
+      });
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        setLanguage(button.getAttribute("data-lang-option"), true);
+      });
+    });
+
+    // Bahasa awal: pilihan tersimpan, atau bawaan
+    setLanguage(readSavedLang() || DEFAULT_LANG, false);
+  }
+
   /* ---------- Inisialisasi ---------- */
   initNavToggle();
   initHeaderScroll();
@@ -362,4 +722,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initBookingOptions();
   initChipGroups();
   initNotifyForm();
+  initFaqAccordion();
+  initLanguageToggle(); // terakhir, supaya semua listener bahasa sudah terdaftar
 });

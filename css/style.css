@@ -256,6 +256,39 @@ h1, h2, h3 {
 
 .main-nav__cta { padding: 12px 18px; }
 
+/* Toggle bahasa EN | ID */
+.lang-toggle {
+  display: inline-flex;
+  margin-right: 16px;
+  padding: 3px;
+  background: var(--warm-white);
+  border: 1px solid var(--beige);
+  border-radius: var(--radius-sm);
+}
+
+.lang-toggle__btn {
+  padding: 6px 10px;
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  font-family: var(--font-text);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--navy);
+  transition: background var(--transition), color var(--transition);
+}
+
+.lang-toggle__btn:hover:not(.is-active) {
+  background: var(--beige-light);
+  color: var(--navy);
+}
+
+.lang-toggle__btn.is-active {
+  background: var(--navy);
+  color: var(--cream);
+}
+
 /* Tombol hamburger (disembunyikan di desktop) */
 .nav-toggle {
   display: none;
@@ -736,6 +769,21 @@ h1, h2, h3 {
   background: var(--warm-white);
   border-radius: var(--radius-lg);
   color: var(--navy);
+}
+
+/* Desktop: judul, deskripsi, dan kotak sejajar antar kolom */
+@media (min-width: 900px) {
+  .steps {
+    grid-template-rows: auto auto 1fr;
+    gap: 0 24px; /* jarak antar kolom saja; jarak vertikal sudah diatur margin */
+  }
+
+  .step {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
 }
 
 /* Kalender booking */
@@ -1439,6 +1487,11 @@ h1, h2, h3 {
 
   .notify__title,
   .notify__lead { max-width: none; }
+
+  .lang-toggle {
+    align-self: flex-start;
+    margin-right: 0;
+  }
 }
 
 /* ---------- 15. Responsive: HP (< 600px) ---------- */
